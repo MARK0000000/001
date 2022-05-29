@@ -255,12 +255,15 @@ button {
   text-align: center;
   margin-top: 20px;
 }
-
-@media (min-width: 856px) {
-  .br {
+.br {
     display: none;
   }
-
+@media (max-width: 856px) {
+  .br {
+    display: block;
+  }
+}
+@media (min-width: 856px) {
   .block {
     display: block;
   }
