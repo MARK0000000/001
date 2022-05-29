@@ -349,7 +349,7 @@ button {
     height: 330px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 500px 356px;
+    -ms-grid-columns: 600px 256px;
     grid-template-columns: 500px 356px;
     -ms-grid-rows: 124px 35px 100px 35px 40px;
     grid-template-rows: 124px 100px 40px;
