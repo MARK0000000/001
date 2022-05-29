@@ -355,6 +355,7 @@ button {
     grid-template-rows: 124px 100px 40px;
     margin-bottom: 90px;
     row-gap: 35px;
+    padding; 0;
   }
 
   .hello > *:nth-child(1) {
