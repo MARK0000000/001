@@ -119,8 +119,8 @@ button {
 }
 
 .posts {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 355px;
   height: 550px;
   display: -webkit-box;
@@ -257,6 +257,10 @@ button {
 }
 
 @media (min-width: 856px) {
+  .br {
+    display: none;
+  }
+
   .block {
     display: block;
   }
@@ -323,7 +327,7 @@ button {
     display: inline-block;
     font-weight: 400;
     font-size: 22px;
-    line-height: 50px;
+    line-height: 60px;
     color: #21243D;
   }
 
@@ -339,13 +343,15 @@ button {
   }
 
   .hello {
+    height: 330px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 500px 356px;
     grid-template-columns: 500px 356px;
-    -ms-grid-rows: 124px 100px 40px;
+    -ms-grid-rows: 124px 35px 100px 35px 40px;
     grid-template-rows: 124px 100px 40px;
     margin-bottom: 90px;
+    row-gap: 35px;
   }
 
   .hello > *:nth-child(1) {
@@ -359,22 +365,22 @@ button {
   }
 
   .hello > *:nth-child(3) {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
 
   .hello > *:nth-child(4) {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
 
   .hello > *:nth-child(5) {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
 
   .hello > *:nth-child(6) {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 2;
   }
   .hello .avatar__position {
@@ -397,7 +403,11 @@ button {
     -webkit-box-shadow: -4px 6px 1px 1px #EDF7FA;
             box-shadow: -4px 6px 1px 1px #EDF7FA;
   }
+  .hello h1 {
+    text-align: left;
+  }
   .hello p {
+    text-align: left;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -424,6 +434,7 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    height: 60px;
   }
   .blueBackground .pretext .pretext__link {
     padding-top: 3px;
@@ -431,17 +442,28 @@ button {
     color: blue;
   }
   .blueBackground .posts {
+    margin-top: 26px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: row;
-        -ms-flex: row;
-            flex: row;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: 856px;
+    height: 300px;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    justify-content: space-between;
   }
   .blueBackground .posts .posts__first {
+    padding: 25px;
     width: 420px;
     height: 300px;
     background-color: #fff;
@@ -458,7 +480,20 @@ button {
             justify-content: space-between;
     padding: 30px;
   }
+  .blueBackground .posts .posts__first .posts__h {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    color: #21243D;
+  }
+  .blueBackground .posts .posts__first .posts__date {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #21243D;
+  }
   .blueBackground .posts .posts__second {
+    padding: 25px;
     width: 420px;
     height: 300px;
     background-color: #fff;
@@ -486,6 +521,10 @@ button {
     font-size: 18px;
     line-height: 26px;
     color: #21243D;
+  }
+
+  .featuredWorks {
+    text-align: left;
   }
 
   .infotable__img {
